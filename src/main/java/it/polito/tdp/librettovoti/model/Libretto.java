@@ -13,4 +13,22 @@ public class Libretto {
 			s=s+v.toString()+"\n";
 		} return s;
 	}
+	
+	public List listaVotiUguali(int punteggio) {
+		ArrayList <Voto>stampa=new ArrayList<Voto>();
+		for(Voto v:voti) {
+			if(v.getVoto()==punteggio)
+				stampa.add(v);
+		}
+		return stampa;
+	}
+	
+	public Libretto votiUguali(int voto) {
+		Libretto stampa=new Libretto();
+		for(Voto v:voti) {
+			if(v.getVoto()==voto)
+				stampa.add(v);
+		}
+		return stampa;
+	}
 }
